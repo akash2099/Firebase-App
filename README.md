@@ -1,2 +1,2 @@
 # Firebase App
- Contains firebase related components in a single unit
+ Contains Firebase related components in a single unit
