@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context=".UploadImageFirebase">
+
+    <ImageView
+        android:id="@+id/previewImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toTopOf="@+id/image_file_upload_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/common_google_signin_btn_icon_dark_focused"
+        android:scaleType="centerCrop"
+        tools:layout_editor_absoluteX="3dp" />
+
+    <EditText
+        android:id="@+id/image_file_upload_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Your Image file name"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/choose_image"
+        app:layout_constraintTop_toBottomOf="@+id/previewImage"
+        tools:layout_editor_absoluteX="38dp" />
+
+    <Button
+        android:id="@+id/choose_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E8C3CF"
+        android:text="CHOOSE IMAGE"
+        android:textColor="#E91E63"
+        app:layout_constraintBottom_toTopOf="@+id/upload_image"
+        app:layout_constraintTop_toBottomOf="@+id/image_file_upload_name"
+        tools:layout_editor_absoluteX="53dp" />
+
+    <Button
+        android:id="@+id/upload_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#002BFF"
+        android:text="UPLOAD IMAGE"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintTop_toBottomOf="@+id/choose_image"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:progressTint="#0031E4"
+        style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upload_image"
+        tools:layout_editor_absoluteX="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
