@@ -1,15 +1,12 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
-// Apply the Crashlytics Gradle plugin
-apply plugin: 'com.google.firebase.crashlytics'
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.akash2099.firebaseapp"
-        minSdkVersion 21
+        applicationId "com.akash2099.fragment_tutorial"
+        minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -23,10 +20,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        sourceCompatibility = 1.8
-        targetCompatibility = 1.8
-    }
 
 }
 
@@ -34,31 +27,10 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'com.google.firebase:firebase-core:18.0.0'
-    implementation 'com.google.firebase:firebase-database:19.5.1'
-    implementation 'com.google.firebase:firebase-crashlytics:17.3.0'
-    implementation 'com.google.firebase:firebase-auth:20.0.1'
-    implementation 'com.google.firebase:firebase-storage:19.2.0'
-    implementation 'com.firebaseui:firebase-ui-database:7.1.1'
-
-    def exoplayer_version = "2.12.2"
-    implementation "com.google.android.exoplayer:exoplayer:${exoplayer_version}"
-    implementation "com.google.android.exoplayer:exoplayer-core:${exoplayer_version}"
-    implementation "com.google.android.exoplayer:exoplayer-dash:${exoplayer_version}"
-    implementation "com.google.android.exoplayer:exoplayer-hls:${exoplayer_version}"
-    implementation "com.google.android.exoplayer:exoplayer-smoothstreaming:${exoplayer_version}"
-    implementation "com.google.android.exoplayer:exoplayer-ui:${exoplayer_version}"
-
-    implementation 'com.google.firebase:firebase-messaging:21.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
-
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.2.0-beta01'
-    implementation 'com.squareup.picasso:picasso:2.71828'
-
-    // For opening browser from application
-    implementation 'androidx.browser:browser:1.3.0'
+    implementation 'com.android.support:design:28.0.0'
 }
